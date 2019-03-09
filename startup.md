@@ -8,14 +8,15 @@ including database configuration, Django-specific options and application-specif
 
 
 let's start...on cmd
----------------------------------------------------------------------------------------------------------
+<pre>
 ...\> pip install django
 ...\> django-admin startproject mysite
+</pre>
 This will create a mysite directory in your current directory.
 
 
 Let’s look at what startproject created:
-
+<pre>
 mysite/
     manage.py
     mysite/
@@ -24,48 +25,48 @@ mysite/
         urls.py
         wsgi.py
         
-        
+</pre>        
 
 
-# The outer mysite/ root directory is just a container for your project.
+## The outer mysite/ root directory is just a container for your project.
  Its name doesn’t matter to Django; you can rename it to anything you like.
 
-# manage.py: A command-line utility that lets you interact with this Django project in various ways.
+## manage.py: A command-line utility that lets you interact with this Django project in various ways.
 
-# django-admin is Django’s command-line utility for administrative tasks. This document outlines all it can do.
+## django-admin is Django’s command-line utility for administrative tasks. This document outlines all it can do.
 
 
-# In addition, manage.py is automatically created in each Django project. manage.py does the same thing as django-admin but takes care of a few things for you:
+## In addition, manage.py is automatically created in each Django project. manage.py does the same thing as django-admin but takes care of a few things for you:
 
     * It puts your project’s package on sys.path.
     * It sets the DJANGO_SETTINGS_MODULE environment variable so that it points to your project’s settings.py file.
 
-***************************************
 
-APP NAME
+
+### APP NAME
 Many commands take a list of “app names.” An “app name” is the basename of the package containing your models. 
 For example, if your INSTALLED_APPS contains the string 'mysite.blog', the app name is blog.
 
 https://docs.djangoproject.com/en/2.1/ref/django-admin/
 
-***************************************
 
 
-# The inner mysite/ directory is the actual Python package for your project. 
+
+## The inner mysite/ directory is the actual Python package for your project. 
 Its name is the Python package name you’ll need to use to import anything inside it (e.g. mysite.urls). 
 
 
-# mysite/__init__.py: An empty file that tells Python that this directory should be considered a Python package.
+## mysite/__init__.py: An empty file that tells Python that this directory should be considered a Python package.
 
 
-# mysite/settings.py: Settings/configuration for this Django project. Django settings will tell you all about how settings work.
+## mysite/settings.py: Settings/configuration for this Django project. Django settings will tell you all about how settings work.
 
 
-# mysite/urls.py: The URL declarations for this Django project; a “table of contents” of your Django-powered site.
+## mysite/urls.py: The URL declarations for this Django project; a “table of contents” of your Django-powered site.
 (https://docs.djangoproject.com/en/2.1/topics/http/urls/) optional
 
 
-# mysite/wsgi.py: An entry-point for WSGI-compatible web servers to serve your project.
+## mysite/wsgi.py: An entry-point for WSGI-compatible web servers to serve your project.
 ( WSGI is the Web Server Gateway Interface. It is a specification that describes how a web server communicates with web applications, 
 and how web applications can be chained together to process one request. )
 
@@ -74,30 +75,30 @@ and how web applications can be chained together to process one request. )
 
 
 
-### The development server
+## The development server
 
 Let’s verify your Django project works. Change into the outer mysite directory, if you haven’t already, and run the following commands:
 
 ...\> py manage.py runserver
 
-********************************************************************************************************************************************
+
 C:\Users\official-tech\djangoCMDproject\mysite>py manage.py runserver
+<pre>
 Performing system checks...
-
 System check identified no issues (0 silenced).
-
 You have 15 unapplied migration(s). Your project may not work properly until you apply the migrations for app(s): admin, auth, contenttypes, sessions.
 Run 'python manage.py migrate' to apply them.
 March 09, 2019 - 14:44:12
 Django version 2.1.7, using settings 'mysite.settings'
 Starting development server at http://127.0.0.1:8000/
 Quit the server with CTRL-BREAK.
-*********************************************************************************************************************************************
+</pre>
 
 
 
 
-### Changing the port
+
+## Changing the port
 
 By default, the runserver command starts the development server on the internal IP at port 8000.
 
@@ -114,11 +115,11 @@ If you want to change the server’s IP, pass it along with the port. For exampl
 
 
 
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
 The development server automatically reloads Python code for each request as needed. 
 You don’t need to restart the server for code changes to take effect. 
 However, some actions like adding files don’t trigger a restart, so you’ll have to restart the server in these cases.
-<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
 
 
 
