@@ -1,3 +1,14 @@
+
+if you are opening this first than go to startup page first
+https://github.com/officialtech/django/blob/master/startup.md
+it's the first page to start Django
+
+----------------------------------------------------------------------------------------------------------------
+
+
+
+
+
 ## C:\Users\official-tech\djangoCMDproject\mysite>py manage.py startapp polls
 
 ### C:\Users\official-tech\djangoCMDproject\mysite>dir
