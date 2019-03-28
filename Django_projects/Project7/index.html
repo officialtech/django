@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>first page</title>
+</head>
+<body bgcolor="#dcdcdc">
+
+
+<form action="/newPage/" method="post">
+
+    {% csrf_token %}
+
+        <table align="center" border="10" width="300" >
+
+            <tr>
+                <th width="260"> Student Registration </th>
+            </tr>
+
+            <tr>
+                <th width="260">
+                    <input type="text" placeholder="Name" name="name1" required>
+                </th>
+            </tr>
+
+            <tr>
+            <th width="260">
+                    <input type="number" placeholder="Age" name="age1" required>
+            </th>
+            </tr>
+            <tr>
+            <th width="260">
+                    <input type="number" placeholder="Contact" name="c1" required>
+            </th>
+            </tr>
+
+            <tr>
+                <th width="260">
+                    <input type="radio" name="rd" value="Male" checked>Male
+
+                    <input type="radio" name="rd" value="Female">Female
+                </th>
+            </tr>
+
+            <tr>
+                <th>
+                    <input type="checkbox" name="s1" value="Core Python" checked> Core Python
+                </th>
+            </tr>
+
+            <tr>
+                <th>
+                    <input type="checkbox" name="s1" value="Advance Python"> Advance Python
+                </th>
+            </tr>
+
+            <tr>
+                <th>
+                    <input type="checkbox" name="s1" value="Django"> Django
+                </th>
+            </tr>
+
+        <tr>
+            <th>
+                <select name="teachers">
+                    <option> Adam </option>
+                    <option> Mark </option>
+                    <option> John </option>
+                    <option> Doe </option>
+                    <option> Gabrial </option>
+                    <option> jin chao </option>
+                    <option> Mr.Gafy </option>
+                </select>
+            </th>
+        </tr>
+
+
+        <tr>
+            <th width="150">
+            <input type="text" name="nam" placeholder="Enter Username" required>
+            </th>
+        </tr>
+
+        <tr>
+            <th width="150">
+            <input type="password" name="pas" placeholder="Enter Password" required>
+            </th>
+        </tr>
+
+
+            <tr>
+                <th>
+                    <button type="submit">SAVE</button>
+                </th>
+            </tr>
+
+        </table>
+</form>
+
+</body>
+</html>
