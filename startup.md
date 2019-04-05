@@ -136,7 +136,9 @@ A project can contain multiple apps. An app can be in multiple projects.
 
 NOW GO TO ANOTHER DIRECTORY >>> FIRSTPROJECT
 
-
+To create app, go to inside project directory, for that follow:
+cd mysite
+python manage.py startapp app_name
 
 
 
