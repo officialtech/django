@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>second</title>
+</head>
+<body>
+
+<h1 align="center"> <mark> Welcome to Detail Page </mark></h1>
+
+{% for oh in key %}
+
+<h2 style="color: blue" align="center"> {{ oh.id }} </h2>
+<h2 align="center"> {{ oh.name }} </h2>
+<h2 align="center"> {{ oh.fee }} </h2> <br>
+
+{% endfor %}
+
+
+
+<div align="center">
+{% if key.has_previous %}
+    <a href="?whatever=1"> &laquo; first</a>
+    <a href="?whatever={{ key.previous_page_number }}"> previous </a>
+{% endif %}
+
+    <span> Page {{ key.number }} of {{ key.per_page_items.num_pages }}</span>
+
+{% if key.has_next %}
+    <a href="?whatever={{ key.next_page_number }}"> next</a>
+    <a href="?whatever={{ key.per_page_items.num_pages }}">last &raquo;</a>
+{% endif %}
+
+</div>
+</body>
+</html>
