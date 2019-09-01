@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+        <h3> Are You Attending ?</h3>
+        <form action="/send/" method="post">
+            {% csrf_token %}
+        <input type="radio" name="rb" value="Yes" checked>Yes
+        <input type="radio" name="rb" value="Maybe">Maybe
+        <input type="radio" name="rb" value="No">No
+        <button type="submit">Submit</button>
+        </form>
+        <h2>{{ message }}</h2>
+</body>
+</html>
